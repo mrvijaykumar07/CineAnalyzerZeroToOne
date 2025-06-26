@@ -14,11 +14,24 @@ export default function Home() {
     setResult(null);
 
     try {
-      const res = await fetch('http://localhost:5000/api/sentiment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text }),
-      });
+      // const res = await fetch('http://localhost:5000/api/sentiment', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ text }),
+      // });
+
+
+
+const res = await fetch(
+  "https://cineanalyzerzerotoone.onrender.com/api/sentiment",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text }),
+  }
+);
+
+
 
       if (!res.ok) throw new Error(`API error: ${res.status}`);
       const data = await res.json();
