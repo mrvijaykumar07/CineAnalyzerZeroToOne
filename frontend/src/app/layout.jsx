@@ -1,5 +1,7 @@
 import './globals.css'; // Make sure you import your CSS here
-import Navbar from '@/components/Navbar'; // Adjust the path based on your folder structure
+
+
+import Navbar from '../Components/Navbar';
 
 export const metadata = {
   title: 'Sentiment Analyzer',

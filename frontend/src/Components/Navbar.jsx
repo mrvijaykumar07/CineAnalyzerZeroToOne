@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { User } from "lucide-react";
 import { HiX } from "react-icons/hi";
-import MobileSideMenu from "@/Components/MobaileSideMenu";
+import MobileSideMenu from "../Components/MobaileSideMenu";
+
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
